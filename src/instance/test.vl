@@ -1,0 +1,37 @@
+defmodule logicSystem
+  using mathLib
+  using setLib
+
+  defspace booleanSpace end
+
+  defspace intSpace < booleanSpace end
+
+  defoperator myOp : myType end
+
+  defoperator andOp : boolType end
+
+  defvar x : intType end
+
+  defvar y : boolType , z : intType end
+
+  defer myRelation : boolType end
+
+  [ label : kind ]
+
+  defrule (myOp x 1) -> (andOp y 2) end
+
+  defexpression (myOp x 1) end
+
+  defexpression forall n in intType . (andOp n 0) end
+
+  defexpression exists m in boolType . (myOp m 1) end
+
+  defexpression x = y end
+
+  defexpression (andOp x 1) or (myOp y 2) end
+
+  defexpression neg (myOp x 1) end
+
+  defexpression x and y end
+
+end
